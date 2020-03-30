@@ -13,7 +13,7 @@ public class UlkeAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ulke);
+        setContentView(R.layout.fragment_ulke);
 
         Bundle bundle = getIntent().getExtras();
         String result = bundle.getString("data");

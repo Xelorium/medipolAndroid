@@ -13,7 +13,7 @@ import java.nio.Buffer;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class AndroidReq extends AsyncTask<Void,Void,Void> {
+public class AndroidReq extends BaseReq {
 
     AndroidReqListener listener;
 
@@ -25,34 +25,9 @@ public class AndroidReq extends AsyncTask<Void,Void,Void> {
         this.listener = listener ;
     }
 
-    String result = "";
-
     @Override
-    protected Void doInBackground(Void... voids) {
-
-
-        try {
-            URL url = new URL ("https://restcountries-v1.p.rapidapi.com/all?rapidapi-key=577e1f28d2msh8b2bf1fed9ebd7ep1df55fjsn5b55f896a62a");
-
-            HttpURLConnection connection =(HttpsURLConnection) url.openConnection(); // gönderieln url e bağlanmadsı açması için
-            InputStream stream = connection.getInputStream(); //data akışını getir. açılan urlyi
-
-            InputStreamReader reader = new InputStreamReader(stream);// akışı oku
-            BufferedReader bfReader = new BufferedReader(reader); // bufferle adım adım sürekili olku  dataya çevir
-
-            String res = "";
-            while ((res = bfReader.readLine()) != null){
-                result += res;
-            }
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        Log.d("MedipolRq:",result);
-
-        return null;
+    public String getReqUrl() {
+        return "https://restcountries-v1.p.rapidapi.com/all?rapidapi-key=577e1f28d2msh8b2bf1fed9ebd7ep1df55fjsn5b55f896a62a";
     }
 
     @Override
