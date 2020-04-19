@@ -1,4 +1,4 @@
-package com.example.ders09_03;
+package com.example.covidnineteen;
 
 import android.os.AsyncTask;
 import android.util.Log;

@@ -1,6 +1,4 @@
-package com.example.ders09_03;
-
-import android.os.AsyncTask;
+package com.example.covidnineteen;
 
 public class CoronaReq extends BaseReq {
 

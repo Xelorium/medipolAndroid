@@ -1,4 +1,4 @@
-package com.example.ders09_03;
+package com.example.covidnineteen;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -46,10 +46,10 @@ public class FragmentCorona extends Fragment implements CoronaReq.CoronaReqListe
 
         CoronaModel model = gson.fromJson(result, CoronaModel.class);
 
-        tvTotalCase.setText(model.total_cases);
-        tvTotalRecover.setText(model.total_recovered);
-        tvTotalDeath.setText(model.total_deaths);
-        tvDate.setText(model.statistic_taken_at);
+        tvTotalCase.setText("Total Cases: "+model.total_cases);
+        tvTotalRecover.setText("Total Recovered Patients: "+model.total_recovered);
+        tvTotalDeath.setText("Total Deaths: "+model.total_deaths);
+        tvDate.setText("Last Updated: "+model.statistic_taken_at);
 
     }
 }

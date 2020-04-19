@@ -1,4 +1,4 @@
-package com.example.ders09_03;
+package com.example.covidnineteen;
 
 public class CoronaModel {
 
